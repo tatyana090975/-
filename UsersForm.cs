@@ -16,18 +16,19 @@ namespace Дипломная_работа
         {
             InitializeComponent();
         }
+        //Заполнение grid данными из таблицы users и person
         //Кнопка "Создать запись"
         private void createRecordButton_Click(object sender, EventArgs e)
         {
             UsersCardForm usersCardForm = new UsersCardForm();
-            usersCardForm.ShowDialog();
+            usersCardForm.Show();
         }
         //Кнопка "Выход"
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
             GeneralForm generalForm = new GeneralForm();
-            generalForm.ShowDialog();
+            generalForm.Show();
         }
     }
 }

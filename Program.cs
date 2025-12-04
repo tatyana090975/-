@@ -16,7 +16,7 @@ namespace Дипломная_работа
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new PositionForm());
             //Application.Run(new GeneralForm());
             //Application.Run(new UsersForm());
         }

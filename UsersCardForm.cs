@@ -39,5 +39,10 @@ namespace Дипломная_работа
                 this.Close();
             }            
         }
+
+        private void loginLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
