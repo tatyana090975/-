@@ -15,8 +15,13 @@ namespace Дипломная_работа
         public UsersForm()
         {
             InitializeComponent();
+            LoadUsersGridView();
         }
         //Заполнение grid данными из таблицы users и person
+        private void LoadUsersGridView()
+        {
+            dataGridViewUsers.DataSource = DBQueries.LoadGridUsersForm();
+        }
         //Кнопка "Создать запись"
         private void createRecordButton_Click(object sender, EventArgs e)
         {

@@ -45,17 +45,19 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.closeButton);
-            this.panel2.Location = new System.Drawing.Point(587, 400);
+            this.panel2.Location = new System.Drawing.Point(783, 492);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 40);
+            this.panel2.Size = new System.Drawing.Size(267, 49);
             this.panel2.TabIndex = 5;
             // 
             // closeButton
             // 
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeButton.Location = new System.Drawing.Point(105, 3);
+            this.closeButton.Location = new System.Drawing.Point(140, 4);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 28);
+            this.closeButton.Size = new System.Drawing.Size(100, 34);
             this.closeButton.TabIndex = 0;
             this.closeButton.Text = "Выход";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -65,17 +67,19 @@
             // 
             this.panel1.Controls.Add(this.deleteRecordButton);
             this.panel1.Controls.Add(this.createRecordButton);
-            this.panel1.Location = new System.Drawing.Point(12, 11);
+            this.panel1.Location = new System.Drawing.Point(16, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 80);
+            this.panel1.Size = new System.Drawing.Size(1033, 98);
             this.panel1.TabIndex = 4;
             // 
             // deleteRecordButton
             // 
             this.deleteRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteRecordButton.Location = new System.Drawing.Point(109, 3);
+            this.deleteRecordButton.Location = new System.Drawing.Point(145, 4);
+            this.deleteRecordButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteRecordButton.Name = "deleteRecordButton";
-            this.deleteRecordButton.Size = new System.Drawing.Size(180, 29);
+            this.deleteRecordButton.Size = new System.Drawing.Size(240, 36);
             this.deleteRecordButton.TabIndex = 1;
             this.deleteRecordButton.Text = "Удаление записи";
             this.deleteRecordButton.UseVisualStyleBackColor = true;
@@ -83,9 +87,10 @@
             // createRecordButton
             // 
             this.createRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.createRecordButton.Location = new System.Drawing.Point(3, 3);
+            this.createRecordButton.Location = new System.Drawing.Point(4, 4);
+            this.createRecordButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createRecordButton.Name = "createRecordButton";
-            this.createRecordButton.Size = new System.Drawing.Size(75, 74);
+            this.createRecordButton.Size = new System.Drawing.Size(100, 91);
             this.createRecordButton.TabIndex = 0;
             this.createRecordButton.Text = "Создать запись";
             this.createRecordButton.UseVisualStyleBackColor = true;
@@ -101,30 +106,35 @@
             this.tablePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tablePanel.Controls.Add(this.dataGridViewUsers);
             this.tablePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tablePanel.Location = new System.Drawing.Point(12, 97);
+            this.tablePanel.Location = new System.Drawing.Point(16, 119);
+            this.tablePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tablePanel.Name = "tablePanel";
-            this.tablePanel.Size = new System.Drawing.Size(776, 297);
+            this.tablePanel.Size = new System.Drawing.Size(1034, 365);
             this.tablePanel.TabIndex = 3;
             // 
             // dataGridViewUsers
             // 
             this.dataGridViewUsers.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.dataGridViewUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUsers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUsers.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
-            this.dataGridViewUsers.Size = new System.Drawing.Size(774, 295);
+            this.dataGridViewUsers.RowHeadersWidth = 51;
+            this.dataGridViewUsers.Size = new System.Drawing.Size(1032, 363);
             this.dataGridViewUsers.TabIndex = 0;
             // 
             // UsersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tablePanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UsersForm";
             this.Text = "Пользователи";
             this.panel2.ResumeLayout(false);

@@ -128,5 +128,60 @@ namespace Дипломная_работа
                 dB.closeConnection();
             }
         }
+
+        //Сохраниение должности в таблицу users
+        public static string SaveUsersCard(int person_id, string login, string password)
+        {
+            string errorMessage = string.Empty;
+            DB dB = new DB();
+            try
+            {
+                dB.openConnection();
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("INSERT INTO users (person_id, login, password) VALUES ( @pers, @log, @pass)", dB.GetConnection());
+                command.Parameters.AddWithValue("@pers", person_id);
+                command.Parameters.AddWithValue("@log", login);
+                command.Parameters.AddWithValue("@pass", password);
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                errorMessage = "Карточка успешно сохранена.";
+                return errorMessage;
+            }
+            catch (MySqlException ex) when (ex.Number == 1062) // Код ошибки дублирования
+            {
+                // Извлекаем значение из сообщения об ошибке
+                errorMessage = $"Логин '{login}' уже занят. Придумайте другой";
+                return errorMessage;
+            }
+            catch (MySqlException ex)
+            {
+                errorMessage = $"Ошибка базы данных: {ex.Message}";
+                return errorMessage;
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Ошибка: {ex.Message}";
+                return errorMessage;
+            }
+            finally
+            {
+                dB.closeConnection();
+            }
+        }
+        //Заполнение grid UsersForms данными из таблиц users и person
+        public static DataTable LoadGridUsersForm()
+        {
+            DB dB = new DB();
+            dB.openConnection();
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter1 = new MySqlDataAdapter();                
+            MySqlCommand command = new MySqlCommand("SELECT u.users_id, u.login, p.name, p.secondname, p.surname FROM users u LEFT OUTER JOIN person p ON u.person_id = p.person_id",dB.GetConnection());
+            adapter1.SelectCommand = command;
+            adapter1.Fill(table);
+            dB.closeConnection();
+            return table;
+        }
+    
     }
 }
